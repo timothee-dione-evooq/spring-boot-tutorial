@@ -22,9 +22,18 @@ public class QuestionService {
       return questionDao.findByCategory(category);
   }
 
-  public String addQuestion(@RequestBody Question question) {
+  public String addQuestion(Question question) {
      return String.valueOf(questionDao.save(question));
   }
+
+    public String updateQuestion(Question question) {
+      return String.valueOf(questionDao.save(question));
+    }
+
+    public String deleteQuestion(Question question) {
+      questionDao.delete(question);
+      return "Question was successfully deleted";
+    }
 }
 
 

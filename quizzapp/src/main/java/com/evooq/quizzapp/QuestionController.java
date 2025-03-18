@@ -28,5 +28,15 @@ public class QuestionController {
         return questionService.addQuestion(question);
     }
 
+    @PutMapping("update")
+    public String updateQuestion(@RequestBody Question question) {
+        return questionService.updateQuestion(question);
+    }
+
+    @DeleteMapping("delete")
+    public String deleteQuestion(@RequestBody Question question) {
+        return questionService.deleteQuestion(question);
+    }
+
 }
 
